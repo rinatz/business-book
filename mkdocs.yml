@@ -1,0 +1,62 @@
+site_name: ゼロから学ぶビジネススキル
+site_description: ゼロから学ぶビジネススキル
+site_author: IDA Kenichiro
+site_url: http://rinatz.github.io/business-book
+repo_name: rinatz/business-book
+repo_url: https://github.com/rinatz/business-book
+copyright: Copyright &copy 2023 IDA Kenichiro
+
+theme:
+  name: material
+  palette:
+    # ライトモード
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: ダークモードに切り替え
+    # ダークモード
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: ライトモードに切り替え
+  font:
+    text: Noto Sans
+    code: Inconsolata
+  language: ja
+  logo: img/logo.svg
+  favicon: img/logo.svg
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - meta
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - ホーム: index.md
